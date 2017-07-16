@@ -157,14 +157,30 @@
                                     <constraint firstAttribute="height" constant="176" id="cEC-tf-gc6"/>
                                 </constraints>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNt-LH-GKs">
+                                <rect key="frame" x="5" y="226" width="365" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="oad-2K-yOP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StillTime-Regular" family="Still Time" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.90975145729999995" green="0.90975145729999995" blue="0.90975145729999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="MNt-LH-GKs" firstAttribute="leading" secondItem="Ecq-Lp-0Eg" secondAttribute="leading" constant="5" id="5rW-XA-qtQ"/>
                             <constraint firstItem="7D5-Ce-4aw" firstAttribute="leading" secondItem="Ecq-Lp-0Eg" secondAttribute="leading" id="92p-iH-DYw"/>
+                            <constraint firstAttribute="trailing" secondItem="MNt-LH-GKs" secondAttribute="trailing" constant="5" id="L92-Xz-tpR"/>
+                            <constraint firstItem="MNt-LH-GKs" firstAttribute="top" secondItem="7D5-Ce-4aw" secondAttribute="bottom" constant="50" id="PDm-TX-Qlx"/>
                             <constraint firstItem="7D5-Ce-4aw" firstAttribute="top" secondItem="Ecq-Lp-0Eg" secondAttribute="top" id="TCE-n8-aMq"/>
                             <constraint firstAttribute="trailing" secondItem="7D5-Ce-4aw" secondAttribute="trailing" id="XSB-zp-gNw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblTitle" destination="MNt-LH-GKs" id="jUR-gP-V0R"/>
+                        <outlet property="webView" destination="7D5-Ce-4aw" id="1d6-uJ-UmQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tlk-B5-GyJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
