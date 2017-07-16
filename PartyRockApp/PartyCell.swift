@@ -9,7 +9,7 @@
 import UIKit
 
 class PartyCell: UITableViewCell {
-
+    
     @IBOutlet weak var imgVideoPreview: UIImageView!
     @IBOutlet weak var lblVideoTitle: UILabel!
     
@@ -21,6 +21,18 @@ class PartyCell: UITableViewCell {
     func updateUI(partyRock: PartRock) {
         lblVideoTitle.text = partyRock.videoTitle
         
-        //TODO: set image from url
+        let url = URL(string: partyRock.imageURL)!
+        
+        DispatchQueue.global().async {
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    self.imgVideoPreview.image = UIImage(data: data)
+                }
+            } catch {
+                //error handleing
+            }
+        }
+        
     }
 }
